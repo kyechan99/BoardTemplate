@@ -1,29 +1,32 @@
 extends ../layouts/layout
+block _css
+  link(rel='stylesheet', href='/stylesheets/style.css')
 
 block _content
+  #container-notice.container-fluid
+    .container
+      p Board Template is World Class
+  #container-navbar.container
+    //- h1= title
+    //- p Welcome to #{title}
+    nav.navbar
+      a.navbar-brand(href='#')
+        img.d-inline-block.align-top(src='images/logo.png',   alt='')
+      ul.nav.justify-content-end
+        li.nav-item
+          a.nav-link.active(href='#') HOME
+        li.nav-item
+          a.nav-link(href='#') PAGES
+        li.nav-item
+          a.nav-link(href='#') BLOG
+        li.nav-item
+          a.nav-link(href='#') CONTACT
+  #container-head.container-fluid
+    .container
+      p USER
+  br
+  br
   .container
-    h1= title
-    p Welcome to #{title}
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-      a.navbar-brand(href='#') Navbar
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor01', aria-controls='navbarColor01', aria-expanded='false', aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-      #navbarColor01.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item.active
-            a.nav-link(href='#')
-              | Home 
-              span.sr-only (current)
-          li.nav-item
-            a.nav-link(href='#') Features
-          li.nav-item
-            a.nav-link(href='#') Pricing
-          li.nav-item
-            a.nav-link(href='#') About
-        form.form-inline.my-2.my-lg-0
-          input.form-control.mr-sm-2(type='text', placeholder='Search')
-          button.btn.btn-secondary.my-2.my-sm-0(type='submit') Search
-    br
     br
     h1 table
     table.table.table-hover

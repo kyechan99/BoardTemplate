@@ -1,8 +1,59 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
+  padding-left: 0%;
+  padding-right: 0%;
+  font-family: 'Raleway', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* 
+  Container - Notice
+*/
+#container-notice {
+  padding: 0px;
+  background-color : #8f2626de;
+}
+#container-notice p {
+  padding: 5px;
+  color: white;
+}
+
+/* 
+  Container - Navbar
+*/
+#container-navbar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#container-navbar nav {
+  border-color: white;
+}
+#container-navbar ul a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #c97474;
+  border-right: 0.1px;
+  border-right-style: solid;
+  border-color: #772e2e;
+  line-height: 3px;
+}
+#container-navbar ul a.active {
+  color: #883b3b;
+  font-weight: 800;
+}
+
+/*
+  Container - Head
+*/
+#container-head {
+  display: block;
+  height: 130px;
+  line-height: 130px;
+  /* font-style: bold; */
+  background-color : #da4d4d;
+}
+#container-head p {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
 }
