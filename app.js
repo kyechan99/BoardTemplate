@@ -18,6 +18,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use('/css', express.static(__dirname + '/node_modules/bootswatch/dist'));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -35,7 +40,11 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('business/error');
+});
+
+app.listen(process.env.PORT || 8080, function(){
+  console.log("Connected 8080 port");
 });
 
 module.exports = app;

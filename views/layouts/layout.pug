@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //- Bootstrap
+    //- link(href='css/bootstrap.min.css', rel='stylesheet') 
+    link(href='css/simplex/bootstrap.min.css', rel='stylesheet') 
+    block _css
+  body
+    //- Header
+      block _header
+    
+    //- Content
+    block _content
+
+    //- Footer
+      block _footer
+    
+    //- JS
+    script(src='js/jquery.min.js')
+    script(src="js/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous")
+    script(src='js/bootstrap.min.js')
+    block _js
