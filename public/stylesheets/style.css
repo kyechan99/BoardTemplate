@@ -6,6 +6,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+
 /* 
   Container - Notice
 */
@@ -34,13 +35,33 @@ body {
   color: #c97474;
   border-right: 0.1px;
   border-right-style: solid;
-  border-color: #772e2e;
+  border-color: #814e4e;
   line-height: 3px;
+}
+#container-navbar ul li.last-one a {
+  border-right-style: none;
 }
 #container-navbar ul a.active {
   color: #883b3b;
   font-weight: 800;
 }
+@media (max-width:992px) {
+  #container-navbar {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  #container-navbar ul a {
+    font-size: 12px;
+  }
+  #container-navbar .navbar {
+    display: inline-block;
+    float: none;
+  }
+  #container-navbar a.navbar-brand {
+    padding-top: 0px;
+  }
+}
+
 
 /*
   Container - Head
