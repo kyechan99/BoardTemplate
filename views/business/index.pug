@@ -1,78 +1,66 @@
 extends ../layouts/layout
 block _css
-  link(rel='stylesheet', href='/stylesheets/style.css')
+  
 
-block _content
+block _notice
   #container-notice.container-fluid
     .container
       p Board Template is World Class
-  #container-navbar.container
-    //- h1= title
-    //- p Welcome to #{title}
-    nav.navbar
-      a.navbar-brand(href='#' style='margin-right:0px;')
-        img.d-inline-block.align-top(src='images/logo.png', style='width:300px; height:57px;' alt='')
-      ul.nav.justify-content-end
-        li.nav-item
-          a.nav-link.active(href='#') HOME
-        li.nav-item
-          a.nav-link(href='#') PAGES
-        li.nav-item
-          a.nav-link(href='#') BLOG
-        li.nav-item.last-one
-          a.nav-link(href='#') CONTACT
+
+block _navbar
+  include ../components/navbar
+
+block _head
   #container-head.container-fluid
     .container
       p USER
   br
   br
-  .container
+
+block _body
+  #container-body.container
     br
-    h1 table
+    h2 User List
     table.table.table-hover
       thead
         tr
           th(scope='col') #
-          th(scope='col') First headad
-          th(scope='col') Last ehad
-          th(scope='col') Handle hedah
+          th(scope='col') Title
+          th(scope='col') User
+          th(scope='col') Date
       tbody
-        tr.table-primary
-          th(scope='row') 1
-          td Mark
-          td Otto
-          td @mdo
-        tr.table-secondary
-          a(href='#')
-            th(scope='row') 2
-            td  Jacob
-            td Thornton
-            td @fat
-        tr.table-primary
-          th(scope='row') 3
-          td(colspan='2') Larry the Bird
-          td @twitter
+        - for (var i = 0; i < userData.length; i++)
+          if (i % 2 === 0)
+            tr.table-secondary
+              td= i
+              each item in userData[i]
+                td= item
+          else
+            tr.table-primary
+              td= i
+              each item in userData[i]
+                td= item
 
 block _js
   script.
     $(function(){
-            $("table tr").click(function(){
-              var str = "";
-              var tr = $(this);
-              var td = tr.children();
+      $("table tr").click(function(){
+        var str = "";
+        var tr = $(this);
+        var td = tr.children();
 
-              console.log(tr.text());
+        console.log(tr.text());
 
-              var no = td.eq(0).text();
-              var userid = td.eq(1).text();
-              var name = td.eq(2).text();
-              var email = td.eq(3).text();
+        var no = td.eq(0).text();
+        var userid = td.eq(1).text();
+        var name = td.eq(2).text();
+        var email = td.eq(3).text();
 
-              str +=	 no + ", " + userid + ", " + name + ", " + email;		
+        str +=	 no + ", " + userid + ", " + name + ", " + email;		
 
-                //- var txt = $(this).text();
-              alert(str);
-                //- location.href="/?page="+txt;
-            });
-        });
+          //- var txt = $(this).text();
+        alert(str);
+          //- location.href="/?page="+txt;
+      });
+    });
 

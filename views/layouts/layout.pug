@@ -8,20 +8,20 @@ html
     //- Bootstrap
     //- link(href='css/bootstrap.min.css', rel='stylesheet') 
     link(href='css/simplex/bootstrap.min.css', rel='stylesheet') 
+    //- Font
     link(href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800', rel='stylesheet') 
+    //- Custom CSS
+    link(rel='stylesheet', href='/stylesheets/container.css')
     block _css
   body
-    //- Header
-      block _header
-    
     //- Content
-    block _content
-
-    //- Footer
-      block _footer
-    
+    block _notice    
+    block _navbar
+    block _head
+    block _body
     //- JS
     script(src='js/jquery.min.js')
     script(src="js/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous")
     script(src='js/bootstrap.min.js')
+    //- Custom JS
     block _js
