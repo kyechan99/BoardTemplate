@@ -1,0 +1,36 @@
+
+#container-body {
+    position: absolute;
+    height: 450px;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    /* background-color: tomato; */
+}
+#container-body video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+#container-body .video-content {
+    position: absolute;
+    bottom: 0;
+    top: 35%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    color: white;
+    overflow: hidden; 
+}
+#container-body .video-content h1 {
+    font-weight: 800;
+}
+#container-body .video-content button {
+    color: white;
+    border-color:white;
+}
+video::-webkit-media-controls {
+    display: none !important;
+}

@@ -6,7 +6,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     
     //- Bootstrap
-    //- link(href='css/bootstrap.min.css', rel='stylesheet') 
+    link(href='css/bootstrap.min.css', rel='stylesheet') 
     link(href='css/simplex/bootstrap.min.css', rel='stylesheet') 
     //- Font
     link(href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800', rel='stylesheet') 
@@ -21,7 +21,8 @@ html
     block _body
     //- JS
     script(src='js/jquery.min.js')
-    script(src="js/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous")
+    //- script(src="js/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous")
     script(src='js/bootstrap.min.js')
     //- Custom JS
     block _js
