@@ -34,3 +34,31 @@
 video::-webkit-media-controls {
     display: none !important;
 }
+
+#container-content {
+    /* #container-body::height : 450px
+       #container-head::margin-bottom : 30px 
+       #container-content::margin-top : 50px
+       450 + 30 + 50 : 530px */
+    margin-top: 530px;
+    margin-bottom: 50px;
+    text-align: center;
+    /* background-color: skyblue; */
+}
+#container-content #content-title {
+    padding-top: 80px;
+    font-weight: 800;
+}
+#container-content #title-line {
+    width: 100px;
+    margin-bottom: 80px;
+    border-top-width: 3px;
+    border-top-color: brown;
+}
+#container-content .col-md-4 h1 {
+    margin-top: 25px;
+    font-weight: 700;
+}
+#container-content #fa-custom {
+    color: #464646;
+}

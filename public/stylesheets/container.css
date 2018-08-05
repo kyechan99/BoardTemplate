@@ -81,7 +81,7 @@ body {
 /*
   Container - Body
 */
-#container-body h2 {
+#container-body #body-title {
   font-weight: 600;
   margin-bottom: 30px;
   border-bottom-width: 3px;
