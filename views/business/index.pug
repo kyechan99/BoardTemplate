@@ -26,23 +26,51 @@ block _body
       h3 Nice to meet you
       p BoardTemplate is World Class
       br
-      button.btn.btn-outline-primary(type='button') README
+      button.btn.btn-outline-danger(type='button') README
   #container-content.container
     h1#content-title Why We Use?
     hr#title-line
     .row
       .col-md-4
         i.far.fa-eye.fa-10x#fa-custom
-        h1 Good Design
+        h2 Design
         p Very Simple, an eye-catching design
       .col-md-4
         i.fab.fa-creative-commons-nc.fa-10x#fa-custom
-        h1 Costless
+        h2 Costless
         p It is Free!
       .col-md-4
         i.fab.fa-github.fa-10x#fa-custom
-        h1 Open Source
+        h2 Open Source
         p This is OpenSource project.
+  #container-contact.container-fluid
+    .container
+      .row
+        .col-md-6
+          h1 CONTACT
+          p Please Contact here. If you want.
+          br
+          h5 Name
+          p Ye-Chan Kang
+          hr
+          h5 E-mail
+          p kyechan99@naver.com
+          hr
+          h5 Introduce
+          p
+            | Hi! BoardTemplate is Open Source.
+            br
+            | Do repair yourself! 
+        .col-md-6
+          form(action="")
+            .form-group
+              label Email
+              input.form-control(type="email" placeholder="name@example.com")
+            .form-group
+              label Content
+              textarea.form-control(rows='10')
+            button.btn.btn-light.float-right(type='submit' style='width:100%') Send
+
   br
   br
   br
