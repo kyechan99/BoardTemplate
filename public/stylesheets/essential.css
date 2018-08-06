@@ -1,0 +1,14 @@
+a {
+    color: #e65757;
+}
+a.a-block {
+    display: block;
+}
+a.a-bold {
+    color: #da6e6ec2;
+    font-weight: 700;
+}
+a.a-fa {
+    color: #da6e6e96;
+    margin-right: 3px;
+}

@@ -87,3 +87,20 @@ video::-webkit-media-controls {
 #container-contact h1 {
     font-weight: 800;
 }
+
+/* 
+  Container - Footer
+*/
+#container-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#container-footer .col-md-1,
+#container-footer .col-md-2,
+#container-footer .col-md-4 {
+    /* background-color: skyblue; */
+    padding: 15px;
+}
+#container-footer .col-md-3 {
+    background-color: tomato;
+}
