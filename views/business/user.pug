@@ -1,6 +1,6 @@
 extends ../layouts/layout
 block _css
-  
+  link(rel="stylesheet", href="stylesheets/user.css")
 
 block _notice
   #container-notice.container-fluid
@@ -30,16 +30,44 @@ block _body
           th(scope='col') Date
       tbody
         - for (var i = 0; i < userData.length; i++)
-          if (i % 2 === 0)
-            tr.table-secondary
-              td= i
+            tr
               each item in userData[i]
                 td= item
+    nav
+      ul.pagination.justify-content-center
+        if (boardIdx > 1)
+          li.page-item
+            a.page-link(href=href='user?boardIdx=' + prevIdx, aria-label='Previous')
+              span(aria-hidden='true') «
+              span.sr-only Previous
+        else
+          li.page-item.disabled
+            a.page-link(href='#', aria-label='Previous')
+              span(aria-hidden='true') «
+              span.sr-only Previous
+        - for (; startIdx < lastIdx; startIdx++)
+          if (startIdx == boardIdx)
+            li.page-item.active
+              a.page-link(href='user?boardIdx=' + startIdx)= startIdx
           else
-            tr.table-primary
-              td= i
-              each item in userData[i]
-                td= item
+            li.page-item
+              a.page-link(href='user?boardIdx=' + startIdx)= startIdx
+        if (boardIdx < (database.length) / boardLength)
+          li.page-item
+            a.page-link(href='user?boardIdx=' + nextIdx, aria-label='Next')
+              span(aria-hidden='true') »
+              span.sr-only Next
+        else
+          li.page-item.disabled
+            a.page-link(href='#', aria-label='Next')
+              span(aria-hidden='true') »
+              span.sr-only Next
+  br
+  br
+  br
+  br
+  br
+  br
 
 block _js
   script.

@@ -7,12 +7,12 @@
       - var navItems = ['HOME', 'USER', 'LOGIN', 'CONTACT']
       - var navAddress = ['/', '/user', '/login', '/contact']
       - for (var i = 0; i < navItems.length; i++)
-          if (navItems[i] == navIdx)
+          if (navItems[i] == currentPage)
             li.nav-item
-              a.nav-link.active(href=navAddress[i]) #{navIdx}
-          else if (navItems[i] == navIdx && i == navItems.length - 1)
+              a.nav-link.active(href=navAddress[i]) #{currentPage}
+          else if (navItems[i] == currentPage && i == navItems.length - 1)
             li.nav-item.last-one
-              a.nav-link.active(href=navAddress[i]) #{navIdx}
+              a.nav-link.active(href=navAddress[i]) #{currentPage}
           else if (i == navItems.length - 1)
             li.nav-item.last-one
               a.nav-link(href=navAddress[i]) #{navItems[i]}

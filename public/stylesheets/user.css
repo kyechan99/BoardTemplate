@@ -1,0 +1,25 @@
+table {
+    color: #790000;
+}
+nav a.page-link {
+    color: #e7b1b1;
+}
+nav a.page-link:hover {
+    color: #e7b1b1;
+    border-color: #f8e9e9;
+    background-color: #f8e9e9;
+}
+nav li.page-item.active a.page-link {
+    background-color: #fabebe;
+    border-color: #fabebe;
+}
+.table-hover tbody tr:hover td {
+    background-color: #ffc7c7cc;
+}
+.table-hover tbody tr.table-danger:hover td {
+    background-color: #f7e4e4;
+}
+
+h2#body-title {
+    color: #5a0000;
+}
