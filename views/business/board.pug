@@ -13,14 +13,14 @@ block _navbar
 block _head
   #container-head.container-fluid
     .container
-      p USER
+      p BOARD
   br
   br
 
 block _body
   #container-body.container
     br
-    h2#body-title User List
+    h2#body-title Board List
     table.table.table-hover
       thead
         tr
@@ -29,15 +29,15 @@ block _body
           th(scope='col') User
           th(scope='col') Date
       tbody
-        - for (var i = 0; i < userData.length; i++)
+        - for (var i = 0; i < boardData.length; i++)
             tr
-              each item in userData[i]
+              each item in boardData[i]
                 td= item
     nav
       ul.pagination.justify-content-center
         if (boardIdx > 1)
           li.page-item
-            a.page-link(href=href='user?boardIdx=' + prevIdx, aria-label='Previous')
+            a.page-link(href=href='board?boardIdx=' + prevIdx, aria-label='Previous')
               span(aria-hidden='true') «
               span.sr-only Previous
         else
@@ -48,13 +48,13 @@ block _body
         - for (; startIdx < lastIdx; startIdx++)
           if (startIdx == boardIdx)
             li.page-item.active
-              a.page-link(href='user?boardIdx=' + startIdx)= startIdx
+              a.page-link(href='board?boardIdx=' + startIdx)= startIdx
           else
             li.page-item
-              a.page-link(href='user?boardIdx=' + startIdx)= startIdx
+              a.page-link(href='board?boardIdx=' + startIdx)= startIdx
         if (boardIdx < (database.length) / boardLength)
           li.page-item
-            a.page-link(href='user?boardIdx=' + nextIdx, aria-label='Next')
+            a.page-link(href='board?boardIdx=' + nextIdx, aria-label='Next')
               span(aria-hidden='true') »
               span.sr-only Next
         else

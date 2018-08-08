@@ -4,8 +4,8 @@
     a.navbar-brand(href='/' style='margin-right:0px;')
       img.d-inline-block.align-top(src='images/logo.png', style='width:300px; height:57px;' alt='')
     ul.nav.justify-content-end
-      - var navItems = ['HOME', 'USER', 'LOGIN', 'CONTACT']
-      - var navAddress = ['/', '/user', '/login', '/contact']
+      - var navItems = ['HOME', 'BOARD', 'LOGIN', 'CONTACT']
+      - var navAddress = ['/', '/board', '/login', '/contact']
       - for (var i = 0; i < navItems.length; i++)
           if (navItems[i] == currentPage)
             li.nav-item
@@ -19,12 +19,3 @@
           else
             li.nav-item
               a.nav-link(href=navAddress[i]) #{navItems[i]}
-
-      //- li.nav-item
-      //-   a.nav-link.active(href='#') HOME
-      //- li.nav-item
-      //-   a.nav-link(href='#') USER
-      //- li.nav-item
-      //-   a.nav-link(href='#') LOGIN
-      //- li.nav-item.last-one
-      //-   a.nav-link(href='#') CONTACT

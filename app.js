@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var boardRouter = require('./routes/board');
 var usersRouter = require('./routes/user');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
 
 app.use('/', indexRouter);
+app.use('/board', boardRouter);
 app.use('/user', usersRouter);
 
 // catch 404 and forward to error handler
