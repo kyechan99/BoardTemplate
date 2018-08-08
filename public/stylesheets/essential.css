@@ -1,14 +1,25 @@
 a {
-    color: #e65757;
+    color: #a74040;
+}
+a:hover {
+    color: #a84c4cd7;
 }
 a.a-block {
     display: block;
 }
 a.a-bold {
-    color: #da6e6ec2;
+    color: #bb3e3e;
+    font-weight: 700;
+}
+a.a-bold:hover {
+    color: #bb3e3ede;
     font-weight: 700;
 }
 a.a-fa {
-    color: #da6e6e96;
+    color: #bb3e3ede;
+    margin-right: 3px;
+}
+a.a-fa:hover {
+    color: #833535c2;
     margin-right: 3px;
 }

@@ -94,7 +94,11 @@ router.get('/', function(req, res, next) {
   ];
 
   // Board Pagination ==============================================================
-  boardIdx = Number(req.query.boardIdx);
+  if (req.query.boardIdx)
+    boardIdx = Number(req.query.boardIdx);
+  else
+    boardIdx = 1;
+
   userData = [];
   for (i = (boardIdx-1) * boardLength; i < boardIdx* boardLength; i++) {
     if (database.length <= i)

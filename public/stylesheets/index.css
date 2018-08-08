@@ -81,6 +81,17 @@ video::-webkit-media-controls {
     background-color: #a32e2e;
     color: white;
 }
+#container-contact input,
+#container-contact textarea,
+#container-contact button
+{
+    font-weight: 500;
+    color: #a32e2e;
+}
+#container-contact button:hover {
+    color: white;
+    background-color: #a32e2e;
+}
 #container-contact hr {
     background-color: white;
 }
@@ -88,19 +99,3 @@ video::-webkit-media-controls {
     font-weight: 800;
 }
 
-/* 
-  Container - Footer
-*/
-#container-footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-#container-footer .col-md-1,
-#container-footer .col-md-2,
-#container-footer .col-md-4 {
-    /* background-color: skyblue; */
-    padding: 15px;
-}
-#container-footer .col-md-3 {
-    background-color: tomato;
-}
