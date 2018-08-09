@@ -1,5 +1,6 @@
 extends ../layouts/layout
 block _css
+  link(rel="stylesheet", href="stylesheets/auth.css")
 
 block _notice
   #container-notice.container-fluid
@@ -15,7 +16,24 @@ block _head
       p LOGIN
 
 block _body
-  #container-body.container-fluid
+  #container-body.container
+    .card.auth-card
+      .card-header
+        h3.card-title Bongjour
+      .card-body
+        form(action='/user/login')
+          .form-group
+            label Email
+            input.form-control(type='email', placeholder='E-mail')
+          .form-group
+            label Password
+            input.form-control(type='password', placeholder='password')
+          .custom-control.custom-checkbox.my-1.mr-sm-2
+            input#customControlInline.custom-control-input(type='checkbox')
+            label.custom-control-label(for='customControlInline') Remember my preference
+          button.btn.btn-danger(type='submit' style='width:100%') LOGIN
+      .card-footer 
+        a.float-center(href='/user/register', style='text-align:center; align-items:center;') Create An Account
 
 block _footer
   include ../components/footer
