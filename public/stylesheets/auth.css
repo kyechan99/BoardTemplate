@@ -1,7 +1,10 @@
 .card.auth-card {
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 0 10px 1px gray;
+    color: #cf3939;
 }
+
 @media (min-width:992px) {
     .card.auth-card {
         width: 500px;
@@ -10,22 +13,27 @@
 .card .card-header {
     text-align: center;
     margin-top: -30px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    font-weight: 700;
-    background-color: #ff5f5f;
+    background-color: #cf3939;
     border-radius: 4px;
+    box-shadow: 0 0 10px 1px gray;
 }
 .card .card-header h3 {
     margin-bottom: 0;
     color: white;
-    background-color: #ff5f5f;
+    font-weight: 700;
+}
+.card .card-body .form-group {
+    margin-bottom: 32px;
 }
 .card .card-body button {
-    background-color: #ff5f5f;
+    width: 100%;
+    font-size: 25px;
     margin-top: 40px;
+    background-color: #cf3939;
 }
 .card .card-footer {
     text-align: center;
@@ -35,7 +43,11 @@
 }
 
 #container-body {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
     align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/pexels-photo-1273431.jpeg");
+    background-position: center center;
 }

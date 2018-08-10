@@ -16,10 +16,11 @@ block _head
       p LOGIN
 
 block _body
-  #container-body.container
+  #container-body.container-fluid
     .card.auth-card
       .card-header
-        h3.card-title Bongjour
+        //- img(src="images/icon.png", alt="", style='width:40px; height:40px;')
+        h3.card-title - Bongjour !! -
       .card-body
         form(action='/user/login')
           .form-group
@@ -31,7 +32,7 @@ block _body
           .custom-control.custom-checkbox.my-1.mr-sm-2
             input#customControlInline.custom-control-input(type='checkbox')
             label.custom-control-label(for='customControlInline') Remember my preference
-          button.btn.btn-danger(type='submit' style='width:100%') LOGIN
+          button.btn.btn-danger(type='submit') LOGIN
       .card-footer 
         a.float-center(href='/user/register', style='text-align:center; align-items:center;') Create An Account
 
