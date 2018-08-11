@@ -1,0 +1,23 @@
+/* 
+  Container - Body
+*/
+#container-body {
+    text-align: center;
+    align-items: center;
+}
+#container-body .row {
+    padding-top: 50px;
+}
+#container-body .row .col-md-6 {
+    margin-bottom: 50px;
+}
+.row .col-block{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media (min-width:992px) {
+    .row .col-block{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

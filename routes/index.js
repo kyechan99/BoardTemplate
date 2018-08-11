@@ -11,4 +11,9 @@ router.get('/login', function(req, res, next) {
   currentPage = 'LOGIN';
   res.render('business/login', { title: 'BoardTemplate-login'});
 });
+/* GET contact page. */
+router.get('/contact', function(req, res, next) {  
+  currentPage = 'CONTACT';
+  res.render('business/contact', { title: 'BoardTemplate-contact'});
+});
 module.exports = router;
