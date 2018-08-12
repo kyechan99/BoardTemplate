@@ -31,8 +31,12 @@ block _body
       tbody
         - for (var i = 0; i < boardData.length; i++)
             tr
-              each item in boardData[i]
-                td= item
+              td= boardData[i].idx
+              td= boardData[i].title
+              td= boardData[i].author
+              td= boardData[i].date
+              //- each item in boardData[i]
+              //-   td= item
     nav
       ul.pagination.justify-content-center
         if (boardIdx > 1)
@@ -52,7 +56,7 @@ block _body
           else
             li.page-item
               a.page-link(href='board?boardIdx=' + startIdx)= startIdx
-        if (boardIdx < (database.length) / boardLength)
+        if (boardIdx < (databaseLength) / boardLength)
           li.page-item
             a.page-link(href='board?boardIdx=' + nextIdx, aria-label='Next')
               span(aria-hidden='true') »

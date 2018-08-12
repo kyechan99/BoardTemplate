@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var mongoClient = require('mongodb').MongoClient;
+global.database = null;
+
 var indexRouter = require('./routes/index');
 var boardRouter = require('./routes/board');
 var usersRouter = require('./routes/user');
@@ -45,8 +48,18 @@ app.use(function(err, req, res, next) {
   res.render('business/error');
 });
 
+function connectDB() {
+  var databaseUrl = 'mongodb://localhost:27017/';
+  mongoClient.connect(databaseUrl, function(err, db) {
+    if (err) throw err;
+    console.log('Database Connected : ' + databaseUrl);
+    global.db = db.db('btDB');
+  });
+}
+
 app.listen(process.env.PORT || 8080, function(){
   console.log("Connected 8080 port");
+  connectDB();
 });
 
 module.exports = app;
