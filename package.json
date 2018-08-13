@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/kyechan99/BoardTemplate.git"
   },
+  "license": "MIT",
   "author": "kyechan99",
   "bugs": {
     "url": "https://github.com/kyechan99/BoardTemplate/issues"
