@@ -22,13 +22,13 @@ block _body
         //- img(src="images/icon.png", alt="", style='width:40px; height:40px;')
         h3.card-title - Bongjour !! -
       .card-body
-        form(action='/user/login')
+        form(action='/user/login', method='post')
           .form-group
             label Email
-            input.form-control(type='email', placeholder='E-mail')
+            input.form-control(type='id', placeholder='E-mail', name='id')
           .form-group
             label Password
-            input.form-control(type='password', placeholder='password')
+            input.form-control(type='password', placeholder='password', name='password')
           .custom-control.custom-checkbox.my-1.mr-sm-2
             input#customControlInline.custom-control-input(type='checkbox')
             label.custom-control-label(for='customControlInline') Remember my preference

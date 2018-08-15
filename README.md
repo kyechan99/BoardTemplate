@@ -29,7 +29,7 @@ Node.js를 기반으로 제작한 게시판 템플릿으로, 기본적인 웹 �
 임시 데이터를 생성하기 이전에 MongoDB에서의 `auto increment`를 위해 위 함수를 선언해 주시길 바랍니다.
 `auto increment`가 작동하는 방식이라면, 꼭 위의 함수를 사용하지 않아도 됩니다.
 
-### Insert Temp Data
+### Insert BBS Temp Data
 ```js
 > db.bbs.insertMany([
     {idx:autoInc("bbs"), title:"This is temp Title _ 0", author:"kyechan", date:new Date()},
@@ -48,6 +48,16 @@ Node.js를 기반으로 제작한 게시판 템플릿으로, 기본적인 웹 �
 ```
 임시 데이터들입니다.
 If you need more temp data -> [moreTempData](https://github.com/kyechan99/BoardTemplate/blob/master/moreTempData.txt)
+
+### Insert User Temp Data
+```js
+> db.users.insertMany([
+    {idx:autoInc("users"), id:"test", pw:"test"},
+    {idx:autoInc("users"), id:"root", pw:"1234"},
+    {idx:autoInc("users"), id:"kyechan", pw:"1234"},
+    {idx:autoInc("users"), id:"John", pw:"1234"}
+])
+```
 
 
 ## Preview

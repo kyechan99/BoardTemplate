@@ -7,10 +7,10 @@ router.get('/', function(req, res, next) {
   res.render('business/index', { title: 'BoardTemplate'});
 });
 /* GET login page. */
-router.get('/login', function(req, res, next) {  
-  currentPage = 'LOGIN';
-  res.render('business/login', { title: 'BoardTemplate-login'});
-});
+// router.get('/login', function(req, res, next) {  
+// 	currentPage = 'LOGIN';
+// 	res.render('business/login', { title: 'BoardTemplate-login'});
+// });
 /* GET contact page. */
 router.get('/contact', function(req, res, next) {  
   currentPage = 'CONTACT';
