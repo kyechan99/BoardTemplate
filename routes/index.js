@@ -12,7 +12,8 @@ router.get('/', function(req, res, next) {
 // 	res.render('business/login', { title: 'BoardTemplate-login'});
 // });
 /* GET contact page. */
-router.get('/contact', function(req, res, next) {  
+router.get('/contact', function(req, res, next) {
+  // url = req.url;
   currentPage = 'CONTACT';
   res.render('business/contact', { title: 'BoardTemplate-contact'});
 });

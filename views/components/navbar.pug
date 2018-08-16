@@ -2,10 +2,10 @@
 #container-navbar.container
   nav.navbar
     a.navbar-brand(href='/' style='margin-right:0px;')
-      img.d-inline-block.align-top(src='images/logo.png', style='width:300px; height:57px;' alt='')
+      img.d-inline-block.align-top(src=global.url+'/images/logo.png', style='width:300px; height:57px;' alt='')
     ul.nav.justify-content-end
-      - var navItems = ['HOME', 'BOARD', 'LOGIN', 'CONTACT']
-      - var navAddress = ['/', '/board', '/login', '/contact']
+      - var navItems = ['HOME', 'BOARD', 'PROFILE', 'CONTACT']
+      - var navAddress = ['/', '/board/1', '/user', '/contact']
       - for (var i = 0; i < navItems.length; i++)
           if (navItems[i] == currentPage)
             li.nav-item

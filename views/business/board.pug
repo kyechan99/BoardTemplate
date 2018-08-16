@@ -1,6 +1,6 @@
 extends ../layouts/layout
 block _css
-  link(rel="stylesheet", href="stylesheets/board.css")
+  link(rel="stylesheet", href=global.url+"/stylesheets/board.css")
 
 block _notice
   #container-notice.container-fluid
@@ -41,7 +41,7 @@ block _body
       ul.pagination.justify-content-center
         if (boardIdx > 1)
           li.page-item
-            a.page-link(href=href='board?boardIdx=' + prevIdx, aria-label='Previous')
+            a.page-link(href='/board/' + prevIdx, aria-label='Previous')
               span(aria-hidden='true') «
               span.sr-only Previous
         else
@@ -52,13 +52,13 @@ block _body
         - for (; startIdx < lastIdx; startIdx++)
           if (startIdx == boardIdx)
             li.page-item.active
-              a.page-link(href='board?boardIdx=' + startIdx)= startIdx
+              a.page-link(href='/board/' + startIdx)= startIdx
           else
             li.page-item
-              a.page-link(href='board?boardIdx=' + startIdx)= startIdx
+              a.page-link(href='/board/' + startIdx)= startIdx
         if (boardIdx < (databaseLength) / boardLength)
           li.page-item
-            a.page-link(href='board?boardIdx=' + nextIdx, aria-label='Next')
+            a.page-link(href='/board/' + nextIdx, aria-label='Next')
               span(aria-hidden='true') »
               span.sr-only Next
         else

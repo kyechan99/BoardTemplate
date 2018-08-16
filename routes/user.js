@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET login page. */
 router.get('/', function(req, res, next) {  
-	currentPage = 'LOGIN';
+	currentPage = 'PROFILE';
 	res.render('business/login', { title: 'BoardTemplate-login'});
 });
 

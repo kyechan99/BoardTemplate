@@ -12,6 +12,7 @@ var boardRouter = require('./routes/board');
 var usersRouter = require('./routes/user');
 
 var app = express();
+var config = require('./config/config');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -49,16 +50,16 @@ app.use(function(err, req, res, next) {
 });
 
 function connectDB() {
-  var databaseUrl = 'mongodb://localhost:27017/';
-  mongoClient.connect(databaseUrl, function(err, db) {
+  // var databaseUrl = 'mongodb://localhost:27017/';
+  mongoClient.connect(config.db_url, function(err, db) {
     if (err) throw err;
-    console.log('Database Connected : ' + databaseUrl);
+    console.log('Database Connected : ' + config.db_url);
     global.db = db.db('btDB');
   });
 }
 
-app.listen(process.env.PORT || 8080, function(){
-  console.log("Connected 8080 port");
+app.listen(process.env.PORT || config.server_port, function(){
+  global.url = config.domain + ':' + config.server_port;
   connectDB();
 });
 

@@ -6,14 +6,14 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     
     //- Bootstrap
-    link(href='css/bootstrap.min.css', rel='stylesheet') 
+    link(href=global.url+'/css/bootstrap.min.css', rel='stylesheet') 
     //- link(href='css/simplex/bootstrap.min.css', rel='stylesheet') 
     //- Font
     link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,800', rel='stylesheet') 
     link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.12/css/all.css', integrity='sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9', crossorigin='anonymous')
     //- Custom CSS
-    link(rel='stylesheet', href='/stylesheets/container.css')
-    link(rel='stylesheet', href='/stylesheets/essential.css')
+    link(rel='stylesheet', href=global.url+'/stylesheets/container.css')
+    link(rel='stylesheet', href=global.url+'/stylesheets/essential.css')
     block _css
   body
     //- Content
@@ -23,9 +23,9 @@ html
     block _body
     block _footer
     //- JS
-    script(src='js/jquery.min.js')
+    script(src=global.url+'/js/jquery.min.js')
     //- script(src="js/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous")
-    script(src='js/bootstrap.min.js')
+    script(src=global.url+'/js/bootstrap.min.js')
     //- Custom JS
     block _js

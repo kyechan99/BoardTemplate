@@ -29,14 +29,13 @@ var getBBS = function(startIdx, boardLength, callback) {
 
 
 /* GET board listing. */
-router.get('/', function(req, res, next) {
+router.get('/:idx', function(req, res, next) {
   boardLength = 10;       // !!!  SET How many list on the screen  !!!
   currentPage = 'BOARD';
   boardIdx = 1;
   boardData = [];
-
-  if (req.query.boardIdx)
-    boardIdx = Number(req.query.boardIdx);
+  if (req.params.idx)
+    boardIdx = Number(req.params.idx);
     
   if (global.db) {
     getBBS((boardIdx-1) * boardLength, boardLength, function(err, result) {
