@@ -51,7 +51,7 @@ app.use(function(err, req, res, next) {
 
 function connectDB() {
   // var databaseUrl = 'mongodb://localhost:27017/';
-  mongoClient.connect(config.db_url, function(err, db) {
+  mongoClient.connect(config.db_url, {useNewUrlParser:true}, function(err, db) {
     if (err) throw err;
     console.log('Database Connected : ' + config.db_url);
     global.db = db.db('btDB');
